@@ -2,7 +2,7 @@ let client = express = require("../dbConnect");
 let projectCollection;
 
 setTimeout(() => {
-    projectCollection = client.db().collection("Homeless People");
+    projectCollection = client.db().collection("Projects");
 },2000)
 
 //install collection
@@ -11,10 +11,10 @@ const insertProjects = (project,callback) => {
 }
 // get project...
 const getProjects = (callback) => {
-        projectCollection.find({}).toArray(callback);
+    projectCollection.find({}).toArray(callback);
     }
 
-    module.exports = {
-        insertProjects, getProjects
-        }
+module.exports = {
+    insertProjects, getProjects
+}
         

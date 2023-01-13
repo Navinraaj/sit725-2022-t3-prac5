@@ -1,8 +1,7 @@
 var express = require("express")
-var router = express.Router();
-//let client = express = require("../dbConnect");
-//let projectCollection;
-let controller = require("../controller");
+var router = express.Router(); 
+//let client = require("../dbConnect"); 
+let controller = require("../controller")
 
 /*
 setTimeout(() => {
@@ -19,8 +18,8 @@ const getProjects = (callback) => {
     }
     */
 
-    router.post('/',(req,res) => {
-        controller.projectController.createProjects(req, res)
+router.post('/',(req,res) => {
+    controller.projectController.createProjects(req, res)
         /*
             console.log("New Project added", req.body)
             var newProject = req.body;
@@ -33,9 +32,9 @@ const getProjects = (callback) => {
                 }
             })
         */
-        })
-    router.get('/',(req,res) => {
-    controller.projectController.retrieveProjects(req, res)
+})
+ router.get('/',(req,res) => {
+    controller.projectController.retrieveProjects(req,res)
 
      /*
     getProjects((err,result) => {
@@ -47,6 +46,7 @@ const getProjects = (callback) => {
     }
     })
     */
-    })
-    module.exports = router; 
+})
+
+module.exports = router; 
             
